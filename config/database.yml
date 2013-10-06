@@ -5,6 +5,7 @@ development:
   database: zielona_pracownia_dev
   pool: 5
   port: 5432
+  host: localhost
   username: zielona_pracownia
   password: zielona_pracownia
 
@@ -14,14 +15,16 @@ test:
   database: zielona_pracownia_test
   pool: 5
   port: 5432
+  host: localhost
   username: zielona_pracownia
   password: zielona_pracownia
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: zielona_pracownia_production
+  database: zielona_pracownia_prod
   pool: 5
   port: 5432
+  host: localhost
   username: zielona_pracownia
   password: zielona_pracownia

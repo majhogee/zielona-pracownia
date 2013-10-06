@@ -10,4 +10,19 @@
  *
  *= require_self
  *= require_tree .
+ *= require twitter/bootstrap
  */
+
+#wrap1 {
+  width: 900px; 
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  color: #194719;
+}
+
+#wrap2 {
+  width: 900px; 
+  margin: auto;
+}
