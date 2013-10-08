@@ -1,0 +1,21 @@
+%h1 Nasze Projekty:
+
+%table
+  %tr
+    %th Projekt
+    %th Opis
+    %th
+    %th
+    %th
+
+  - @projects.each do |project|
+    %tr
+      %td= project.name
+      %td= project.description
+      %td= link_to 'Show', project
+      %td= link_to 'Edit', edit_project_path(project)
+      %td= link_to 'Destroy', project, :method => :delete, :data => { :confirm => 'Usunąć projekt?' }
+
+%br
+
+= link_to 'New CProject', new_project_path
