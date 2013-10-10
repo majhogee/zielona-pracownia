@@ -12,10 +12,11 @@
     %tr
       %td= project.name
       %td= project.description
+      %td= project.picture
       %td= link_to 'Show', project
       %td= link_to 'Edit', edit_project_path(project)
       %td= link_to 'Destroy', project, :method => :delete, :data => { :confirm => 'Usunąć projekt?' }
 
 %br
 
-= link_to 'New CProject', new_project_path
+= link_to 'New Project', new_project_path

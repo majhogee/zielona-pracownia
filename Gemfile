@@ -44,6 +44,8 @@ end
 
 gem 'less-rails-bootstrap'
 gem "paperclip", "~> 3.0"
+gem 'carrierwave'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
