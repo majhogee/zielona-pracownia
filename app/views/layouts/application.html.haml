@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Zielona Pracownia
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = favicon_link_tag 'favicon.ico'
+  %body
+    #wrap1
+      Studio projektowania ogrodów Zielona Pracownia - razem stworzymy Twój wymarzony ogród!
+    #wrap2
+      = yield
