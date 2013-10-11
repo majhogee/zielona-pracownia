@@ -12,11 +12,13 @@
     %tr
       %td= project.name
       %td= project.description
-      %td= project.picture
-      %td= link_to 'Show', project
-      %td= link_to 'Edit', edit_project_path(project)
-      %td= link_to 'Destroy', project, :method => :delete, :data => { :confirm => 'Usunąć projekt?' }
+      %td= link_to 'Pokaż', project
+      %td= link_to 'Edytuj', edit_project_path(project)
+      %td= link_to 'Usuń', project, :method => :delete, :data => { :confirm => 'Usunąć projekt?' }
 
 %br
+= link_to 'Dodaj nowy projekt', new_project_path
+%br
+= link_to 'Zobacz komentarze', comments_path
 
-= link_to 'New Project', new_project_path
+<!-- %td= project.picture -->

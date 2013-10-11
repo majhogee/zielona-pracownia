@@ -1,15 +1,15 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b Projekt:
   = @project.name
 %p
-  %b Description:
+  %b 
   = @project.description
 %p
   %b 
   = image_tag(@project.picture_url, :width => 400) if @project.picture.present?
 
-= link_to 'Edit', edit_project_path(@project)
+= link_to 'Edytuj', edit_project_path(@project)
 \|
-= link_to 'Back', projects_path
+= link_to 'Powrót', projects_path
