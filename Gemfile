@@ -45,6 +45,7 @@ end
 gem 'less-rails-bootstrap'
 gem "paperclip", "~> 3.0"
 gem 'carrierwave'
+gem 'html2haml'
 
 
 # Use ActiveModel has_secure_password
