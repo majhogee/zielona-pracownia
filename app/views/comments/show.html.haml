@@ -9,4 +9,4 @@
 
 = link_to 'Edytuj', edit_project_comment_path(@comment.project_id, @comment.id)
 \|
-= link_to 'Powrót', projects_path
+= link_to 'Powrót', project_path(@comment.project_id, @comment.id)
