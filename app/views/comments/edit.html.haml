@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Pokaż', @comment
+= link_to 'Pokaż', project_comment_path(@comment.project_id, @comment.id)
 \|
-= link_to 'Powrót', projects_path
+= link_to 'Powrót', project_path

@@ -8,15 +8,20 @@
     %th
     %th
 
+
+
   - @comments.each do |comment|
     %tr
       %td= comment.content
       %td= comment.project_id
-      %td= link_to 'Pokaż', comment
-      %td= link_to 'Edytuj', edit_comment_path(comment)
-      %td= link_to 'Usuń', comment, :method => :delete, :data => { :confirm => 'Usunąć komentarz?' }
+      %td= link_to 'Pokaż', project_comment_path(comment.project_id, comment.id)
+      %td= link_to 'Edytuj', edit_project_comment_path(comment.project_id, comment.id)
+      %td= link_to 'Usuń', project_comment_path(comment.project_id, comment.id), :method => :delete, :data => { :confirm => 'Usunąć komentarz?' }
 
 %br
 = link_to 'Nowy komentarz', new_project_comment_path(@project, @comment)
 %br
 = link_to 'Powrót do listy projektów', projects_path
+
+
+<!-- @comments = Comment.find(params[:project_id]) -->

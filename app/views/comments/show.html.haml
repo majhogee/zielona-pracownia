@@ -7,6 +7,6 @@
   %b Numer projektu:
   = @comment.project_id
 
-= link_to 'Edytuj', edit_comment_path(@comment)
+= link_to 'Edytuj', edit_project_comment_path(@comment.project_id, @comment.id)
 \|
 = link_to 'Powrót', projects_path

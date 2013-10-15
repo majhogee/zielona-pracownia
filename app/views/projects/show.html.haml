@@ -9,10 +9,23 @@
 %p
   %b 
   = image_tag(@project.picture_url, :width => 400) if @project.picture.present?
+  %br
+  = link_to 'Edytuj', edit_project_path(@project)
 
-= link_to 'Edytuj', edit_project_path(@project)
-\|
-= link_to 'Powrót', projects_path
+%br
+%p
+  %b Komentarze:
+  %br
+  - @project.comments.each do |comment|
+    %tr
+      %td= comment.content
+      %td= comment.project_id
+      %td= link_to 'Pokaż', project_comment_path(comment.project_id, comment.id)
+      %td= link_to 'Edytuj', edit_project_comment_path(comment.project_id, comment.id)
+      %td= link_to 'Usuń', project_comment_path(comment.project_id, comment.id), :method => :delete, :data => { :confirm => 'Usunąć komentarz?' }
+      %br
 
 %br
 = link_to 'Dodaj komentarz', new_project_comment_path(@project)
+%br
+= link_to 'Powrót', projects_path

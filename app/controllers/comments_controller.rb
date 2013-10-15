@@ -25,7 +25,8 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
+    @project = Project.find(params[:project_id])
+    @comment = @project.comments.build(comment_params)
 
     respond_to do |format|
       if @comment.save
@@ -43,7 +44,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to project_comment_path(@comment.project_id, @comment.id), notice: 'Comment was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -57,7 +58,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url }
+      format.html { redirect_to project_comment_path(@comment.project_id, @comment.id) }
       format.json { head :no_content }
     end
   end
