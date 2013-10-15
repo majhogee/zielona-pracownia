@@ -19,7 +19,6 @@
   - @project.comments.each do |comment|
     %tr
       %td= comment.content
-      %td= comment.project_id
       %td= link_to 'Pokaż', project_comment_path(comment.project_id, comment.id)
       %td= link_to 'Edytuj', edit_project_comment_path(comment.project_id, comment.id)
       %td= link_to 'Usuń', project_comment_path(comment.project_id, comment.id), :method => :delete, :data => { :confirm => 'Usunąć komentarz?' }
