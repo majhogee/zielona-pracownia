@@ -41,7 +41,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
+  gem 'pry-rails', "~> 0.3.2"
   gem 'awesome_print'
 end
 

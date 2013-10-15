@@ -17,6 +17,6 @@
       %td= link_to 'Usuń', comment, :method => :delete, :data => { :confirm => 'Usunąć komentarz?' }
 
 %br
-= link_to 'Nowy komentarz', new_comment_path
+= link_to 'Nowy komentarz', new_project_comment_path(@project, @comment)
 %br
 = link_to 'Powrót do listy projektów', projects_path
