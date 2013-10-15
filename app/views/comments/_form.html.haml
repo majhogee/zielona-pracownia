@@ -8,9 +8,7 @@
 
   .field
     = f.label :treść
-    = f.text_field :content
-  .field
-    = f.label :numer_projektu
-    = f.number_field :project_id
+    = f.text_area :content
+
   .actions
     = f.submit 'Zapisz'
