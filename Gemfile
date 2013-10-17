@@ -51,9 +51,7 @@ gem "paperclip", "~> 3.0"
 gem 'carrierwave'
 gem 'html2haml'
 
-group :production do
-  gem 'rails_12factor', '0.0.2'
-end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
