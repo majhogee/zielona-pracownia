@@ -18,4 +18,4 @@
 /vendor/gems
 .ruby-gemset
 .ruby-version
-
+.env
