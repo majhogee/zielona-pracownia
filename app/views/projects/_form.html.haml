@@ -15,6 +15,6 @@
   .field
     = f.label :zdjęcie
     = f.hidden_field :picture_cache
-    = f.cl_image_upload :picture 
+    = f.file_field :picture
   .actions
     = f.submit 'Zapisz'
