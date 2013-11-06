@@ -60,6 +60,7 @@ end
 
 gem 'cloudinary'
 gem 'dotenv-rails'
+gem 'thin', '~> 1.6.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
