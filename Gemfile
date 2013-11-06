@@ -36,7 +36,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'therubyracer', platforms: :ruby
 gem 'haml-rails'
 
 group :test, :development do
@@ -49,8 +48,7 @@ group :test, :development do
   gem 'awesome_print'
 end
 
-
-gem 'less-rails-bootstrap'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
 gem "paperclip", "~> 3.0"
 gem 'carrierwave'
 gem 'html2haml'
