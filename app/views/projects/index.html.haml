@@ -16,7 +16,11 @@
 <!--= link_to 'Zobacz komentarze', comments_path -->
 
 <!-- %td= project.picture -->
-<!--  %th Projekt-->
-<!--  %th Opis%td= project.name-->
+<!--  %th Projekt
+<!--  %th Opis
+<!--  %td= project.name
 <!--  %td= project.description -->
+<!--  %td= link_to 'Pokaż', project
+<!--  %td= link_to 'Edytuj', edit_project_path(project)
+<!--  %td= link_to 'Usuń', project, :method => :delete, :data => { :confirm => 'Usunąć projekt?' }
 <!--  %td= link_to cl_image_tag(project.picture_url, :width => 400) if project.picture.present? , project-->

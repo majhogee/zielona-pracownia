@@ -11,6 +11,7 @@
   = cl_image_tag(@project.picture_url, :width => 400) if @project.picture.present?
   %br
   = link_to 'Edytuj', edit_project_path(@project)
+  = link_to 'Usuń', @project, :method => :delete, :data => { :confirm => 'Usunąć projekt?' }
 
 %br
 %p
