@@ -5,10 +5,9 @@
     %th
     %th
     %th
-
-  - @projects.each do |project|
     %tr
-      %td= link_to cl_image_tag(project.picture_url, :width => 200), project
+    - @projects.each do |project|
+      %td= link_to cl_image_tag(project.picture_url, :width => 300), project
 
 %br
 = link_to 'Dodaj nowy projekt', new_project_path
